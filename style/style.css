@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'MimiqPrime-Regular';
+    src: url(MimiqPrime-Regular.ttf);
+}
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+
+    background-color: #000;
+    background: url('../media/stars.png');
+    background-size: 248px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    color: #F8FDFB;
+    text-align: justify;
+    letter-spacing: 2px;
+}
+
+.headerText {
+    text-align: center;
+    color: #DB5190;
+    font-size: 1.15rem;
+    letter-spacing: 0.7ch;   
+    margin-top: 0.6rem;
+}
+
+.headerLink {
+font-style: normal;
+    color: #DB5190;
+}
+
+
+#box1 {
+    position: relative;
+    width: 735px;
+    min-height: 100%;
+    margin: 72px auto;
+    margin-bottom: 300px;
+
+}
+
+#header {
+    height: 345px;
+    width: 735px;
+    background-image: url('');
+    background-repeat: no-repeat;
+    outline: 3px double #F8FDFB;
+    background-size: cover;
+    background-color: #000;
+    font-size: xx-large;
+
+
+}
+
+#links {
+    position: absolute;
+    top: -34.2px;
+    left: 7px;
+    width: 735px;
+    line-height: 30px;
+    text-align: center;
+}
+
+#links a {
+    position: relative;
+    width: 120px;
+    display: inline-block;
+    margin-right: -3px;
+    background-color: #0C0338;
+    color: #F8FDFB;
+    border-radius: 10px 10px 0px 0px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid #F8FDFB;
+    text-align: center;
+}
+
+#links a:hover {
+    background-color: #DB5190;
+    border-bottom: 1px solid #F8FDFB;
+    color: transparent;
+}
+
+#links a:hover::after {
+    content: attr(data-hover);
+    color: #F8FDFB;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+}
+
+.Mimiq-p {
+    font-family: 'MimiqPrime-Regular';
+    font-size: 24px;
+    color: #F8FDFB;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;    
+}
+
+#box2 {
+    position: absolute;
+    top: 359px;
+    width: 528px;
+    min-height: 85%;
+    outline: 3px double #F8FDFB;
+    margin-right: 4px;
+    padding: 8px;
+    background-color: #000;
+
+
+}
+
+#box3 {
+    position: absolute;
+    top: 359px;
+    left: 553px;
+    min-height: 85%;
+    outline: 3px double #F8FDFB;
+    padding: 8px;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    font-family: 'Titillium Web', sans-serif;
+    font-style: bold;
+    display: block;
+    border-bottom: 3px double #F8FDFB;
+    letter-spacing: 2px;
+    margin: -2px 0px 0px -4px;
+
+}
+
+a {
+    color: #fff;
+    background: #000;
+    text-decoration: none;
+    font-style: italic;
+}
+
+
+.date {
+    letter-spacing: normal;
+}
+
+.text {
+    width: 95%;
+    max-width: 160ch;
+    margin: 10ch auto;
+    border: double 5.5pt var(--empc);
+    outline: var(--empc) solid 2.5pt;
+    outline-offset: -3.5ch;
+    background: black;
+}
+
+
+
+/* Add Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    #box1 {
+        width: 95%;
+        margin: 30px auto;
+    }
+
+    #header {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+    }
+
+    #links {
+        width: 100%;
+        left: 0;
+    }
+
+    #links a {
+        width: 80px;
+        font-size: 16px;
+    }
+
+    #box2, #box3 {
+        position: relative;
+        width: 95%;
+        left: 0;
+        top: 20px;
+        margin: 10px auto;
+    }
+
+    .Mimiq-p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    #links a {
+        width: 60px;
+        font-size: 14px;
+    }
+
+    #header {
+        font-size: x-large;
+    }
+
+    .Mimiq-p {
+        font-size: 16px;
+    }
+}

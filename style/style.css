@@ -1,6 +1,6 @@
-*,
-*::before,
-*::after {
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -132,37 +132,32 @@ body {
 
 #entry-box {
     width: 95%;
-    max-width: 1240px;
-    margin: 160px auto;
-
-    outline: double 4px var(--empc);
-    outline-offset: -40px;
-
-    background: #000;
+    max-width: 155ch;
+    margin: 10ch auto;
+    outline: var(--empc) double 4.5pt;
+    outline-offset: -3.5ch;
+    background: black;
     text-align: justify;
     hyphens: auto;
 }
 
 #entry-box div {
-    padding: 40px;
-    padding-top: 12px;
+    padding: 5ch;
+    padding-top: 1.5ch;
     font-size: 1.275rem;
 }
 
 .date {
-    border: double 6px var(--empc);
-    background: #000;
-
+    border: double 4.5pt var(--empc);
+    background: black;
     z-index: 5;
     position: relative;
-
-    padding: 4px 16px;
-    top: -4px;
-    left: -4px;
-
+    padding: 0.5ch 2ch;
+    top: -4.0pt;
+    left: -4pt;
     width: fit-content;
+    width: -moz-fit-content;
     word-break: break-word;
-
     font-weight: normal;
 }
 
@@ -184,40 +179,55 @@ a {
     font-style: italic;
 }
 
-@media (max-width: 768px) {
-    #box1 {
-        width: 95%;
-        margin: 30px auto;
-    }
 
-    #links a {
-        width: 80px;
-        font-size: 16px;
+/* ===== RESPONSIVE DESIGN ===== */
+@media screen and (max-width: 768px) {
+    /* Home page responsive */
+    #links {
+        flex-wrap: wrap;
+        gap: 1.5rem;
     }
-
-    #box2,
-    #box3 {
-        width: 100%;
-        float: none;
-        margin-top: 15px;
+    
+    #box2, #box3 {
+        padding: 2rem;
+        margin: 2rem 1rem;
     }
-
-    #header {
-        font-size: 1.2rem;
+    
+    #box2 h1, #box3 h1 {
+        font-size: 2rem;
     }
+    
+    /* Text entry responsive */
+    #entry-box {
+        width: 98%;
+        margin: 5ch auto;
+        outline-offset: -2ch;
+    }
+    
+    #entry-box div {
+        padding: 3ch;
+        font-size: 1.1rem;
+    }
+    
 }
 
-@media (max-width: 480px) {
-    body {
-        font-size: 16px;
+@media screen and (max-width: 480px) {
+    /* Home page mobile */
+    #links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
-
-    #links a {
-        width: 60px;
-        font-size: 14px;
-    }
-
+    
     #header {
-        font-size: 1rem;
+        padding: 1.5rem;
+        margin: 1.5rem;
+    }
+    
+    /* Text entry mobile */
+    #entry-box {
+        width: 100%;
+        margin: 3ch auto;
+        outline-offset: -1
     }
 }

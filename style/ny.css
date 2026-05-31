@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 :root {
@@ -15,9 +16,13 @@
     --bg-dark: #050510;
 }
 
-body {
+html {
+    zoom: 0.85;
+}
+
+html, body {
     font-family: 'Lucida Grande', sans-serif;
-    background-color: var(--bg-dark);
+
     background-image: url('../media/stars.png');
     background-size: 248px;
     background-attachment: fixed;
@@ -25,9 +30,11 @@ body {
     overflow-x: hidden;
     min-height: 100vh;
     line-height: 1.6;
+    overscroll-behavior: none;
 }
 
-/* ===== SHARED COMPONENTS ===== */
+
+
 /* Header */
 .headerText {
     text-align: center;
@@ -82,9 +89,9 @@ hr {
     margin: 1.5rem 0;
 }
 
-/* ===== HOME PAGE SPECIFIC LAYOUT ===== */
+/*  -HOME PAGE SPECIFIC LAYOUT- */
 /* This CSS only applies to homepage */
-#box1 {
+#grid {
     max-width: 735px;
     margin: 72px auto 300px;
 
@@ -127,12 +134,17 @@ hr {
 #links a::before {
     content: attr(data-hover);
     position: absolute;
+    inset: 0;
 
-
-    left: 0;
-    color: var(--textc);
+    /* center hovertext */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* hovertext colour */
+    color: var(--bg-dark);
     opacity: 0;
-    transition: opacity 0.35s ease;
+    transition: opacity 0.3s ease;
 }
 
 #links a:hover::before {
@@ -144,28 +156,30 @@ hr {
     background-color: #DB5190;
 }
 
-/* Header section */
-#header {
+/* Content boxes */
+#box1 {
     text-align: center;
     padding: 2rem;
-    margin: 2rem auto;
-    max-width: 600px;
+    max-width: 100%;
     border: 1px solid rgba(248, 253, 251, 0.2);
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.7);
+    grid-area: header;
+    
 }
-
-#header p {
+#box p {
     margin: 0.5rem 0;
     font-size: 1.1rem;
 }
 
-/* Content boxes */
 #box2, #box3 {
-    margin: 3rem auto;
+
     padding: 2.5rem;
     border: 1px solid rgba(248, 253, 251, 0.2);
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.8);
+
     max-width: 800px;
+
+    
 }
 
 #box2 h1, #box3 h1 {

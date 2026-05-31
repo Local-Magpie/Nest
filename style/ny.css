@@ -98,7 +98,8 @@ a:hover {
 
     display: inline-block;
     flex: 1;
-    background-color: #000000;
+    background: rgba(0, 0, 0, 0.65);
+
     color: var(--textc);
 
     border: 1px solid var(--brdc);
@@ -143,7 +144,8 @@ a:hover {
 
 
     border: 1px solid var(--brdc);
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.65);
+
     grid-area: header;
 
 }
@@ -157,10 +159,7 @@ a:hover {
 
     padding: 2.5rem;
     border: 1px solid var(--brdc);
-    background: rgba(0, 0, 0, 0.8);
-
-
-
+    background: rgba(0, 0, 0, 0.65);
 
 }
 

@@ -1,7 +1,7 @@
 /* ===== SHARED BASE STYLES ===== */
 * {
 
-    padding: 0;
+
     box-sizing: border-box;
 
 }
@@ -70,7 +70,8 @@ a:hover {
 /*  -HOME PAGE SPECIFIC LAYOUT- */
 /* This CSS only applies to homepage */
 #grid {
-    max-width: 69vw;
+    max-width: 55vw;
+
     margin: 72px auto 300px;
     
     display: grid;
@@ -195,13 +196,13 @@ a:hover {
     text-align: justify;
     hyphens: auto;
     background: rgba(0, 0, 0, 0.65);
+    line-height: 1.8;
 }
 
 #entry-box div {
     padding: 5ch;
     padding-top: 1.5ch;
     font-size: 1.275rem;
-
 
 }
 

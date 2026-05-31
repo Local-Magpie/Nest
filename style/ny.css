@@ -194,12 +194,15 @@ a:hover {
     background: black;
     text-align: justify;
     hyphens: auto;
+    background: rgba(0, 0, 0, 0.65);
 }
 
 #entry-box div {
     padding: 5ch;
     padding-top: 1.5ch;
     font-size: 1.275rem;
+
+
 }
 
 .date {

@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
 
 :root {
@@ -20,17 +20,17 @@ html {
     zoom: 0.85;
 }
 
-html, body {
+body {
     font-family: 'Lucida Grande', sans-serif;
-
     background-image: url('../media/stars.png');
     background-size: 248px;
     background-attachment: fixed;
     color: var(--textc);
     overflow-x: hidden;
     min-height: 100vh;
-    line-height: 1.6;
-    overscroll-behavior: none;
+
+
+
 }
 
 
@@ -66,28 +66,6 @@ a:hover {
     color: var(--textc);
 }
 
-/* Scrollbars */
-::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-    background-color: black;
-}
-
-::-webkit-scrollbar-thumb {
-    color: var(--empc);
-    background-color: var(--empc);
-}
-
-body {
-    scrollbar-width: thin;
-    scrollbar-color: var(--empc) black;
-}
-
-hr {
-    border-color: var(--empc);
-    border-style: solid;
-    margin: 1.5rem 0;
-}
 
 /*  -HOME PAGE SPECIFIC LAYOUT- */
 /* This CSS only applies to homepage */
@@ -124,6 +102,7 @@ hr {
     color: var(--textc);
 
     border: 1px solid var(--brdc);
+
     border-radius: 10px 10px 0 0;
 
     text-transform: uppercase;
@@ -140,7 +119,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     /* hovertext colour */
     color: var(--bg-dark);
     opacity: 0;
@@ -158,38 +137,40 @@ hr {
 
 /* Content boxes */
 #box1 {
-    text-align: center;
+    text-align: left;
     padding: 2rem;
     max-width: 100%;
-    border: 1px solid rgba(248, 253, 251, 0.2);
+    border: 1px solid var(--brdc);
     background: rgba(0, 0, 0, 0.7);
     grid-area: header;
-    
-}
-#box p {
-    margin: 0.5rem 0;
-    font-size: 1.1rem;
+
 }
 
-#box2, #box3 {
+#box1 p {
+    font-size: 1.5rem;
+}
+
+#box2,
+#box3 {
 
     padding: 2.5rem;
-    border: 1px solid rgba(248, 253, 251, 0.2);
+    border: 1px solid var(--brdc);
     background: rgba(0, 0, 0, 0.8);
 
     max-width: 800px;
 
-    
+
 }
 
-#box2 h1, #box3 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+#box2 h1,
+#box3 h1 {
     color: var(--textc);
     text-align: center;
 }
 
-#box2 p, #box3 p {
+
+#box2 p,
+#box3 p {
     font-size: 1.2rem;
     line-height: 1.6;
     margin: 1rem 0;
@@ -244,48 +225,52 @@ hr {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media screen and (max-width: 768px) {
+
     /* Home page responsive */
     #links {
         flex-wrap: wrap;
         gap: 1.5rem;
     }
-    
-    #box2, #box3 {
+
+    #box2,
+    #box3 {
         padding: 2rem;
         margin: 2rem 1rem;
     }
-    
-    #box2 h1, #box3 h1 {
+
+    #box2 h1,
+    #box3 h1 {
         font-size: 2rem;
     }
-    
+
     /* Text entry responsive */
     #entry-box {
         width: 98%;
         margin: 5ch auto;
         outline-offset: -2ch;
     }
-    
+
     #entry-box div {
         padding: 3ch;
         font-size: 1.1rem;
     }
-    
+
 }
 
 @media screen and (max-width: 480px) {
+
     /* Home page mobile */
     #links {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
-    
+
     #header {
         padding: 1.5rem;
         margin: 1.5rem;
     }
-    
+
     /* Text entry mobile */
     #entry-box {
         width: 100%;

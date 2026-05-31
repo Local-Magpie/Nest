@@ -70,9 +70,9 @@ a:hover {
 /*  -HOME PAGE SPECIFIC LAYOUT- */
 /* This CSS only applies to homepage */
 #grid {
-    max-width: 735px;
+    max-width: 69vw;
     margin: 72px auto 300px;
-
+    
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
@@ -141,7 +141,7 @@ a:hover {
     text-align: left;
     padding: 2rem;
     max-width: 100%;
-
+    
 
     border: 1px solid var(--brdc);
     background: rgba(0, 0, 0, 0.65);
